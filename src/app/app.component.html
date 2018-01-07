@@ -2,40 +2,18 @@
     <mat-toolbar color="primary">
       <span>NCAA Foul Tracker</span>
       <span class="toolbar-spacer"></span>
-      <mat-icon class="toolbar-icon">favorite</mat-icon>
-      <mat-icon class="toolbar-icon">delete</mat-icon>
+      <mat-icon class="toolbar-icon">favorite</mat-icon>  <!-- Replace -->
+      <mat-icon class="toolbar-icon">delete</mat-icon>    <!-- Replace -->
     </mat-toolbar>
 
-    <mat-menu x-position="before" #menu="matMenu">
-      <button mat-menu-item>Option 1</button>
-      <button mat-menu-item>Option 2</button>
-    </mat-menu>
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link routerLink="/" routerLinkActive="active">Home</a>
+      <a mat-tab-link routerLink="/teams" routerLinkActive="active">Teams</a>
+      <a mat-tab-link routerLink="/games" routerLinkActive="active">Games</a>
+      <a mat-tab-link routerLink="/settings" routerLinkActive="active">Settings</a>
+    </nav>
 
-    <nav>
-        <a routerLink="/"
-           routerLinkActive="active">Home</a>
-        <a routerLink="/settings"
-           routerLinkActive="active">Settings</a>
-        <a routerLink="/game"
-          routerLinkActive="active">Game</a>
-        <a routerLink="/team"
-          routerLinkActive="active">team</a>
-      </nav>
-
-      <div class="app-container">
-        <router-outlet></router-outlet>
-      </div>
-
-    <mat-card>
-      <button mat-button>All</button>
-      <button mat-raised-button>Of</button>
-      <button mat-raised-button color="primary">The</button>
-      <button mat-raised-button color="accent">Buttons</button>
-    </mat-card>
-
-    <span class="done">
-      <button mat-fab>
-        <mat-icon>check circle</mat-icon>
-      </button>
-    </span>
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
