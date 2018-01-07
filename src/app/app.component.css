@@ -3,6 +3,14 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.toolbar-icon {
+  padding: 0 14px;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
 mat-card {
   max-width: 80%;
   margin: 2em auto;
