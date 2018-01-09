@@ -16,6 +16,7 @@ import { GameProfileComponent } from './components/game/game-profile/game-profil
 import { TeamComponent } from './components/team/team.component';
 import { TeamListComponent } from './components/team/team-list/team-list.component';
 import { TeamProfileComponent } from './components/team/team-profile/team-profile.component';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { TeamProfileComponent } from './components/team/team-profile/team-profil
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
