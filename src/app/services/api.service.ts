@@ -6,7 +6,10 @@ import { Team } from '../objects/team';
 
 @Injectable()
 export class ApiService {
+
   constructor(private http: Http) {  }
+
+  url: 'localhost:8080';
 
   getTeamInfo(teamName: string): Team {
     const team = {
@@ -18,7 +21,12 @@ export class ApiService {
     return team;
   }
 
-  getUserInfoTest(username: string): Promise<Object> {
-    return this.http.get('https://api.github.com/users/' + username).toPromise();
+  getHello(): any {
+    this.http.get('http://localhost:9790/hello').toPromise().then(res => {
+      console.log(res);
+      return res.toString();
+    }).catch(err => {
+      return 'Error';
+    });
   }
 }

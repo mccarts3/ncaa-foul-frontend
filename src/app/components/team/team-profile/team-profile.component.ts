@@ -25,11 +25,6 @@ export class TeamProfileComponent implements OnInit {
   }
 
   testApi(username: string): void {
-    let obj = {};
-
-    this.api.getUserInfoTest(username).then(retVal => {
-      // console.log(retVal._body);
-      obj = retVal;
-    });
+    console.log(this.api.getHello());
   }
 }
