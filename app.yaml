@@ -1,7 +1,14 @@
 # [START runtime]
-runtime: python27
-threadsafe: yes
+runtime: nodejs
+env: flex
 # [END runtime]
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb:
 
 handlers:
 
@@ -28,15 +35,3 @@ skip_files:
 - ^package\.json
 - ^protractor\.conf\.js
 - ^tslint\.json
-
-# [START runtime]
-# runtime: nodejs
-# env: flex
-# [END runtime]
-
-# manual_scaling:
-#   instances: 1
-# resources:
-#   cpu: 1
-#   memory_gb: 0.5
-#   disk_size_gb:
